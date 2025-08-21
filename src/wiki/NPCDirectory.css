@@ -1,0 +1,148 @@
+.npc-directory {
+  padding: 2rem;
+}
+
+.npc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+}
+
+.npc-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.npc-grid::-webkit-scrollbar-track {
+  background: rgba(16, 20, 40, 0.3);
+  border-radius: 4px;
+}
+
+.npc-grid::-webkit-scrollbar-thumb {
+  background: var(--space-accent);
+  border-radius: 4px;
+}
+
+.npc-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--time-accent);
+}
+
+.npc-card {
+  background: rgba(16, 20, 40, 0.8);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--space-accent);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.npc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(62, 62, 255, 0.3);
+  z-index: 1;
+}
+
+.npc-preview-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.npc-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.npc-card h3 {
+  color: var(--time-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.npc-preview-role {
+  color: var(--space-accent);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.npc-preview-location {
+  color: #e1e7ff;
+  margin-bottom: 1rem;
+}
+
+.npc-card {
+  position: relative;
+  margin: 0.5rem 0;
+  padding-top: 0.5rem;
+  transform-origin: center center;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 75, 75, 0.9);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.npc-card:hover .delete-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.delete-icon:hover {
+  background: #ff4b4b;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 75, 75, 0.4);
+}
+
+.view-npc-button {
+  background: transparent;
+  border: 1px solid var(--space-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.npc-card:hover .view-npc-button {
+  background: var(--space-accent);
+  box-shadow: 0 0 15px rgba(62, 62, 255, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(16, 20, 40, 0.8);
+  border-radius: 12px;
+  margin-top: 2rem;
+  border: 1px solid var(--space-accent);
+}
+
+.empty-state p {
+  color: #e1e7ff;
+  font-size: 1.1rem;
+}

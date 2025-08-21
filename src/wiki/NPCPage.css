@@ -1,0 +1,156 @@
+.npc-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  color: var(--time-accent);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  color: var(--space-accent);
+}
+
+.npc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.npc-header h2 {
+  font-size: 2.5rem;
+  color: var(--time-accent);
+  margin: 0;
+}
+
+.edit-button {
+  background: var(--space-accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  background: var(--time-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.delete-button {
+  background: transparent;
+  color: #ff4b4b;
+  border: 1px solid #ff4b4b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #ff4b4b;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 75, 75, 0.3);
+}
+
+.npc-content {
+  background: rgba(16, 20, 40, 0.8);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid var(--space-accent);
+}
+
+.npc-details {
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  gap: 2rem;
+}
+
+.npc-main-image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.npc-main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.npc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-section {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(110, 59, 156, 0.3);
+}
+
+.info-section h3 {
+  color: var(--time-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.info-section p {
+  color: #e1e7ff;
+  line-height: 1.6;
+}
+
+.quest-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quest-list li {
+  color: #e1e7ff;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(110, 59, 156, 0.2);
+}
+
+.quest-list li:last-child {
+  border-bottom: none;
+}
+
+.metadata {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.metadata p {
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .npc-details {
+    grid-template-columns: 1fr;
+  }
+}

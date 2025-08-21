@@ -1,0 +1,25 @@
+.admin-controls {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: right;
+}
+
+.admin-button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--space-accent);
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: auto;
+}
+
+.admin-button:hover {
+  background: var(--space-accent);
+  box-shadow: 0 0 15px var(--space-accent);
+  transform: translateY(-2px);
+}

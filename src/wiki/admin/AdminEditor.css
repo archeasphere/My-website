@@ -1,0 +1,101 @@
+.admin-editor {
+  background: rgba(16, 20, 40, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(62, 62, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--space-accent);
+  color: #fff;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.admin-editor h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--time-accent);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--time-accent);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--space-accent);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--time-accent);
+  box-shadow: 0 0 10px rgba(63, 140, 255, 0.3);
+}
+
+.image-preview {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-button {
+  background: var(--space-accent);
+  color: #fff;
+}
+
+.save-button:hover {
+  background: var(--time-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.cancel-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}

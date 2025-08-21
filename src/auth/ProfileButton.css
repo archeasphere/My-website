@@ -1,0 +1,236 @@
+.profile-container {
+  position: relative;
+}
+
+.profile-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.profile-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--space-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: rgba(16, 20, 40, 0.95);
+  border: 1px solid var(--space-accent);
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: menuSlide 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes menuSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-info h3 {
+  margin: 0;
+  color: var(--time-accent);
+}
+
+.profile-info p {
+  margin: 0.5rem 0 0;
+  color: var(--space-accent);
+  font-size: 0.9rem;
+}
+
+.login-button,
+.logout-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.login-button {
+  background: var(--space-accent);
+  color: white;
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid #ff4b4b;
+  color: #ff4b4b;
+}
+
+.login-button:hover {
+  background: var(--time-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.logout-button:hover {
+  background: rgba(255, 75, 75, 0.1);
+  transform: translateY(-2px);
+}
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.login-form {
+  background: rgba(16, 20, 40, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--space-accent);
+  width: 90%;
+  max-width: 400px;
+  animation: formSlide 0.3s ease;
+}
+
+@keyframes formSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-form h2 {
+  text-align: center;
+  color: var(--time-accent);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--time-accent);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--space-accent);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--time-accent);
+  box-shadow: 0 0 10px rgba(63, 140, 255, 0.3);
+}
+
+.image-preview {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.button-group button[type="submit"] {
+  background: var(--space-accent);
+  color: white;
+}
+
+.button-group .cancel-button {
+  background: transparent;
+  border: 1px solid var(--space-accent);
+  color: white;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+}
+
+.button-group button[type="submit"]:hover {
+  background: var(--time-accent);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.button-group .cancel-button:hover {
+  background: rgba(110, 59, 156, 0.1);
+}

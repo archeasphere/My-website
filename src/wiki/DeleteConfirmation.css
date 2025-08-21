@@ -1,0 +1,109 @@
+.delete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-confirmation {
+  background: rgba(16, 20, 40, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--space-accent);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.delete-confirmation {
+  background: rgba(16, 20, 40, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #ff4b4b;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 0 30px rgba(255, 75, 75, 0.2);
+}
+
+.delete-confirmation h3 {
+  color: #ff4b4b;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.delete-confirmation p {
+  color: #e1e7ff;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.delete-confirmation .highlight {
+  color: var(--time-accent);
+  font-weight: bold;
+}
+
+.delete-confirmation .warning {
+  color: #ff7b7b;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.delete-confirmation .button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.delete-confirmation .delete-button {
+  background: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-confirmation .delete-button:hover {
+  background: #ff3333;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 75, 75, 0.3);
+}
+
+.delete-confirmation .cancel-button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--space-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-confirmation .cancel-button:hover {
+  background: var(--space-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(110, 59, 156, 0.3);
+}

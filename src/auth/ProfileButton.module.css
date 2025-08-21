@@ -1,0 +1,318 @@
+.profileContainer {
+  position: relative;
+}
+
+.profileButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(13, 12, 19, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+}
+
+.profileButton:hover {
+  transform: scale(1.1);
+}
+
+.profileButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profilePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  background: #e0e0e0;
+}
+
+.profileMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  min-width: 200px;
+  z-index: 100;
+  animation: menuSlideIn 0.2s ease-out;
+}
+
+@keyframes menuSlideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profileInfo {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.profileInfo h3 {
+  margin: 0;
+  color: #333;
+}
+
+.profileInfo p {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.loginButton,
+.logoutButton {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.loginButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: #45a049;
+}
+
+.logoutButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.logoutButton:hover {
+  background-color: #d32f2f;
+}
+
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.auth-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.profile-upload {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e0e0e0;
+}
+
+.current-profile,
+.preview-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-profile img,
+.preview-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #666;
+  background: #e0e0e0;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button-group button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button-group button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.auth-switch {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.switch-button:hover {
+  color: #45a049;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.errorMessage {
+  background: rgba(220, 53, 69, 0.1);
+  color: #ff6b6b;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}

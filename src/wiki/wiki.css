@@ -1,0 +1,317 @@
+/* Space and Time themed wiki styles */
+:root {
+  --space-bg: #0a0d1c;
+  --space-accent: #6e3b9c;
+  --time-accent: #3f8cff;
+  --text-glow: 0 0 10px rgba(99, 179, 255, 0.5);
+}
+
+body {
+  background-color: var(--space-bg);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wiki-home {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(rgba(10, 13, 28, 0.9), rgba(10, 13, 28, 0.95)),
+              url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=1600') center/cover;
+  background-attachment: fixed;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.cosmic-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(120deg, var(--time-accent), var(--space-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: var(--text-glow);
+  animation: titlePulse 4s ease-in-out infinite;
+}
+
+.cosmic-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e1e7ff;
+}
+
+.cosmic-note {
+  color: var(--time-accent);
+  font-style: italic;
+}
+
+.wiki-nav {
+  background: rgba(16, 20, 40, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--space-accent);
+}
+
+.nav-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.nav-profile {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.home-button {
+  background: #000 !important;
+  border: none !important;
+  width: 80px;
+  height: 45px;
+  border-radius: 22px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0) !important;
+  margin-right: auto;
+}
+
+.home-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.5) !important;
+}
+
+.home-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.home-button:hover .home-icon {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+}
+
+.wiki-nav ul {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wiki-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.wiki-nav ul button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--space-accent);
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.wiki-nav ul button:hover {
+  background: var(--space-accent);
+  box-shadow: 0 0 15px var(--space-accent);
+  transform: translateY(-2px);
+}
+
+.wiki-article {
+  margin: 3rem auto;
+  max-width: 1200px;
+  background: rgba(16, 20, 40, 0.8);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(62, 62, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--space-accent);
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.new-npc-button {
+  background: var(--space-accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.new-npc-button:hover {
+  background: var(--time-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.npc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.npc-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--space-accent);
+  transition: all 0.3s ease;
+}
+
+.npc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(62, 62, 255, 0.2);
+}
+
+.npc-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.npc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.npc-card h3 {
+  color: var(--time-accent);
+  margin-bottom: 0.5rem;
+}
+
+.npc-role {
+  color: var(--space-accent);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.npc-location {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.npc-description {
+  color: #e1e7ff;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.npc-quests {
+  margin-top: 1rem;
+}
+
+.npc-quests ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.npc-quests li {
+  color: #e1e7ff;
+  padding: 0.25rem 0;
+}
+
+.edit-npc-button {
+  background: transparent;
+  border: 1px solid var(--space-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.edit-npc-button:hover {
+  background: var(--space-accent);
+  transform: translateY(-2px);
+}
+
+.admin-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+@keyframes titlePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
