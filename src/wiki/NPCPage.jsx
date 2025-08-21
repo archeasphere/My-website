@@ -3,6 +3,8 @@ import { loadStoredData } from './articles';
 import AdminEditor from './admin/AdminEditor';
 import DeleteConfirmation, { handleDeleteNpc } from './DeleteConfirmation';
 import { isAdmin } from '../utils/adminAuth';
+import ShopSection from './ShopSection';
+import QuestSection from './QuestSection';
 import './NPCPage.css';
 
 const NPCPage = ({ npcId, onBack }) => {
@@ -69,21 +71,18 @@ const NPCPage = ({ npcId, onBack }) => {
               <p>{npc.description}</p>
             </div>
 
-            {npc.questLines?.length > 0 && (
-              <div className="info-section">
-                <h3>Quest Lines</h3>
-                <ul className="quest-list">
-                  {npc.questLines.map(quest => (
-                    <li key={quest}>{quest}</li>
-                  ))}
-                </ul>
-              </div>
+            {npc.quests?.length > 0 && (
+              <QuestSection quests={npc.quests} />
             )}
 
             <div className="info-section metadata">
               <p>Last edited: {new Date(npc.lastEdited).toLocaleDateString()}</p>
               <p>Editor: {npc.editedBy}</p>
             </div>
+
+            {npc.shopItems && npc.shopItems.length > 0 && (
+              <ShopSection items={npc.shopItems} />
+            )}
           </div>
         </div>
       </div>
