@@ -1,0 +1,232 @@
+.wiki-article {
+  width: 100%;
+}
+
+.armor-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.armor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  color: var(--time-accent);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  color: var(--space-accent);
+}
+
+.search-bar {
+  flex: 0 1 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--space-accent);
+  border-radius: 25px;
+  background: rgba(16, 20, 40, 0.8);
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(63, 140, 255, 0.3);
+}
+
+.add-armor-button {
+  background: var(--space-accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.add-armor-button:hover {
+  background: var(--time-accent);
+  transform: translateY(-2px);
+}
+
+.armor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.armor-card {
+  background: rgba(16, 20, 40, 0.8);
+  border: 1px solid var(--space-accent);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.armor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.armor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.armor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.armor-card-header h3 {
+  margin: 0;
+  color: var(--time-accent);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.armor-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.armor-actions button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.2rem;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  color: var(--space-accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.delete-button:hover {
+  color: #ff4b4b;
+  background: rgba(255, 75, 75, 0.1);
+}
+
+.armor-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.armor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.armor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-section h4 {
+  margin: 0 0 0.3rem;
+  color: var(--time-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.info-section p {
+  margin: 0;
+  color: #e1e7ff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.admin-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Responsive grid */
+@media (max-width: 1200px) {
+  .armor-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .armor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .armor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rarity colors */
+.armor-card[data-rarity="common"] { border-color: #a0a0a0; }
+.armor-card[data-rarity="uncommon"] { border-color: #00ff00; }
+.armor-card[data-rarity="rare"] { border-color: #0070dd; }
+.armor-card[data-rarity="epic"] { border-color: #a335ee; }
+.armor-card[data-rarity="legendary"] { border-color: #ff8000; }

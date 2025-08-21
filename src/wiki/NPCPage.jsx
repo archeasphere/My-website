@@ -75,14 +75,14 @@ const NPCPage = ({ npcId, onBack }) => {
               <QuestSection quests={npc.quests} />
             )}
 
+            {npc.shopItems && npc.shopItems.length > 0 && (
+              <ShopSection items={npc.shopItems} />
+            )}
+
             <div className="info-section metadata">
               <p>Last edited: {new Date(npc.lastEdited).toLocaleDateString()}</p>
               <p>Editor: {npc.editedBy}</p>
             </div>
-
-            {npc.shopItems && npc.shopItems.length > 0 && (
-              <ShopSection items={npc.shopItems} />
-            )}
           </div>
         </div>
       </div>

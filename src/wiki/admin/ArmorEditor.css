@@ -1,0 +1,144 @@
+.armor-editor {
+  background: rgba(16, 20, 40, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid var(--space-accent);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.editor-header h2 {
+  margin: 0;
+  color: var(--time-accent);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--space-accent);
+  transform: rotate(90deg);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e1e7ff;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--space-accent);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--time-accent);
+  box-shadow: 0 0 10px rgba(63, 140, 255, 0.3);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.stat-input label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.image-upload {
+  border: 2px dashed var(--space-accent);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.file-input {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  color: white;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.save-button,
+.cancel-button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-button {
+  background: var(--space-accent);
+  color: white;
+  border: none;
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--space-accent);
+}
+
+.cancel-button {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--space-accent);
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

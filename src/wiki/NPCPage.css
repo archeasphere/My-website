@@ -85,6 +85,7 @@
   display: grid;
   grid-template-columns: minmax(300px, 2fr) 3fr;
   gap: 2rem;
+  align-items: start;
 }
 
 .npc-main-image {
@@ -92,6 +93,7 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  height: fit-content;
 }
 
 .npc-main-image img {

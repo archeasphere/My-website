@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './wiki.css';
 import NPCDirectory from './NPCDirectory';
 import NPCPage from './NPCPage';
+import ArmorPage from './ArmorPage';
 import AdminEditor from './admin/AdminEditor';
 import { isAdmin } from '../utils/adminAuth';
 
@@ -10,6 +11,7 @@ const WikiArticle = ({ article }) => {
   const [isEditing, setIsEditing] = useState(false);
   const adminMode = isAdmin();
 
+  // Handle NPC section
   if (article.id === 'npcs') {
     if (selectedNpcId) {
       return (
@@ -44,6 +46,15 @@ const WikiArticle = ({ article }) => {
             />
           </div>
         )}
+      </div>
+    );
+  }
+
+  // Handle Armor section
+  if (article.id === 'armor') {
+    return (
+      <div className="wiki-article">
+        <ArmorPage onBack={() => window.location.reload()} />
       </div>
     );
   }
